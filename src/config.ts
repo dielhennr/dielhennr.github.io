@@ -15,7 +15,7 @@ export const siteConfig = {
     {
       name: "Geopresence: A spatiotemporal query system",
       description:
-        "The main idea behind this work is to create a geospatial index and query system for edge computing. For a simplistic example, image air quality and weather monitoring devices placed on streetlights in a city; instead of querying weather.com query the streetlight across the street from the restaurant you're going to. Used bitmap compression (RoaringBitmap) and cardinality estimatiom algorithms (HyperLogLog/HyperLogLog++) to optimize the query system for various time and space constraints presented by IoT/low power devices.",
+        "The main idea behind this work is to create a geospatial index and query system for edge computing. For a simplistic example, imagine air quality and weather monitoring devices placed on streetlights in a city; instead of querying weather.com query the streetlight across the street from the restaurant you're going to. Used bitmap compression (RoaringBitmap) and cardinality estimatiom algorithms (HyperLogLog/HyperLogLog++) to optimize the query system for various time and space constraints presented by IoT/low power devices.",
       link: "https://github.com/USF-BigDataLab/geopresence",
       skills: ["C", "HyperLogLog++", "RoaringBitmap"],
     },
