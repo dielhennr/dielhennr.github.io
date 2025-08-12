@@ -1,6 +1,6 @@
 # Ryan Dielhenn – Portfolio
 
-Source code for my personal website, built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+Source code for my personal website, built with [Astro](https://astro.build/), [Tailwind CSS](https://tailwindcss.com/), and [Typescript](https://www.typescriptlang.org).
 
 **Live site:** [ryandielhenn.github.io](https://ryandielhenn.github.io)  
 *Showcasing my work in software engineering, distributed systems, and machine learning.*
