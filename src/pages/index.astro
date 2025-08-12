@@ -42,28 +42,7 @@ import "../styles/global.css";
       document.documentElement.classList.add('dark');
     </script>
     
-    <!-- Smooth scroll animations -->
-    <script is:inline>
-      // Intersection Observer for smooth scroll animations
-      document.addEventListener('DOMContentLoaded', function() {
-        const observerOptions = {
-          threshold: 0.1,
-          rootMargin: '0px 0px -50px 0px'
-        };
 
-        const observer = new IntersectionObserver(function(entries) {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('animate');
-            }
-          });
-        }, observerOptions);
-
-        // Observe all elements with animate-on-scroll class
-        const animatedElements = document.querySelectorAll('.animate-on-scroll');
-        animatedElements.forEach(el => observer.observe(el));
-      });
-    </script>
   </head>
   <body class="bg-neutral-950 transition-colors duration-300">
     <Header />
