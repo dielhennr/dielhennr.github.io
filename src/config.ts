@@ -71,6 +71,14 @@ export const siteConfig = {
           "Held weekly office hours to help students design/debug projects.",
       ],
     },
+    {
+      company: "University of San Francisco",
+      title: "Assistant Systems Administrator",
+      dateRange: "Aug 2019 - May 2020",
+      bullets: [
+          "Assisted the CS support team at USF by updating and maintaining all of the department’s lab machines.",
+      ],
+    },
   ],
   education: [
     {
