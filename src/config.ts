@@ -4,9 +4,9 @@ export const siteConfig = {
   description: "Portfolio website of Ryan Dielhenn",
   accentColor: "#1d4ed8",
   social: {
-    email: "dielhennr@dielhennr.com",
-    linkedin: "https://linkedin.com/in/dielhennr",
-    github: "https://github.com/dielhennr",
+    email: "dielhennr@gmail.com",
+    linkedin: "https://linkedin.com/in/ryandielhenn",
+    github: "https://github.com/ryandielhenn",
   },
   aboutMe:
     "Software engineer with experience at Confluent, where I contributed to Apache Kafka’s KRaft (ZooKeeper-free) architecture. Currently pursuing an M.S. in Computer Science at Cal State LA with a focus on machine learning and distributed systems.",
@@ -23,14 +23,14 @@ export const siteConfig = {
       name: "DFS: A distributed filesystem",
       description:
         "A distributed filesystem built with Java, Netty, and Google Protocol Buffers. The filesystem supports replication, dynamic addition of storage nodes, and compression. The system is also fault tolerant in that if a node goes down or data is corrupted the original data is still available. Bloom filters are used by the controller for probobalistic routing to data requests.",
-      link: "https://github.com/dielhennr/dfs",
+      link: "https://github.com/ryandielhenn/dfs",
       skills: ["Java", "Google Protocol Buffers", "Netty"],
     },
     {
       name: "Fire-Engine",
       description:
         "A multi-threaded search engine that tracks user searches, allows users to crawl web pages, and search an inverted index built from crawled web pages.",
-      link: "https://github.com/dielhennr/Fire-Engine",
+      link: "https://github.com/ryandielhenn/Fire-Engine",
       skills: ["Java"],
     },
   ],
