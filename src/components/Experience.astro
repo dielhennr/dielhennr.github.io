@@ -8,7 +8,7 @@ const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
     <section id="experience" class="pt-20 p-8 sm:p-12 md:p-16 lg:p-24" style={`background-color: ${siteConfig.accentColor}10`}>
       <div>
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-          <div class="lg:col-span-4">
+          <div class="lg:col-span-4 animate-on-scroll" data-animation="fade-up">
             <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-white">
               Experience
             </h2>
@@ -20,7 +20,7 @@ const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
           <div class="lg:col-span-8">
             <div class="relative">
               {siteConfig.experience.map((exp, index) => (
-                <div class="relative mb-12 last:mb-0">
+                <div class="relative mb-12 last:mb-0 animate-on-scroll" data-animation="fade-up" data-delay={index * 200}>
                   {/* Timeline dot at top of card */}
                   <div
                     class="absolute left-1/2 -top-2 w-4 h-4 bg-neutral-400 border-2 rounded-full -translate-x-1/2 z-20 transition-all duration-300 border-neutral-400"
