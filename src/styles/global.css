@@ -14,4 +14,23 @@ body {
   color-scheme: dark;
 }
 
+/* Mobile PDF viewing improvements */
+@media screen and (max-width: 768px) {
+  body {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+  
+  /* Force PDFs to display at proper scale */
+  embed[type="application/pdf"],
+  object[type="application/pdf"],
+  iframe[src*=".pdf"] {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100vw !important;
+    transform: scale(1) !important;
+    transform-origin: top left !important;
+  }
+}
+
 
