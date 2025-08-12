@@ -49,7 +49,7 @@ export const siteConfig = {
       title: "Open Source Contributer",
       dateRange: "Aug 2020 - Dec 2020",
       bullets: [
-        "Continued contributing to Apache Kafka after my internship at Confluent",
+        "Continued contributing to Apache Kafka after my internship at Confluent.",
       ],
     },
     {
