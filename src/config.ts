@@ -62,6 +62,15 @@ export const siteConfig = {
           "Prototyped and benchmarked system performance across varied workloads and programming languages.",
       ],
     },
+    {
+      company: "University of San Francisco",
+      title: "Teaching Assistant for CS326 (Operating Systems) and CS677 (Big Data)",
+      dateRange: "Aug 2019 - May 2020",
+      bullets: [
+          "Designed projects/coursework, reviewed student code weekly, and gave grades with feedback.",
+          "Held weekly office hours to help students design/debug projects.",
+      ],
+    },
   ],
   education: [
     {
