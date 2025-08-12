@@ -13,21 +13,21 @@ export const siteConfig = {
   skills: ["Java", "Golang", "C", "Python", "Kafka", "Docker"],
   projects: [
     {
-      name: "Geopresence: A spatiotemporal query system",
+      name: "Geopresence: spatiotemporal query system",
       description:
         "The main idea behind this work is to create a geospatial index and query system for edge computing. For a simplistic example, imagine air quality and weather monitoring devices placed on streetlights in a city; instead of querying weather.com query the streetlight across the street from the restaurant you're going to. Used bitmap compression (RoaringBitmap) and cardinality estimatiom algorithms (HyperLogLog/HyperLogLog++) to optimize the query system for various time and space constraints presented by IoT/low power devices.",
       link: "https://github.com/USF-BigDataLab/geopresence",
       skills: ["C", "HyperLogLog++", "RoaringBitmap"],
     },
     {
-      name: "DFS: A distributed filesystem",
+      name: "DFS: distributed filesystem",
       description:
         "A distributed filesystem built with Java, Netty, and Google Protocol Buffers. The filesystem supports replication, dynamic addition of storage nodes, and compression. The system is also fault tolerant in that if a node goes down or data is corrupted the original data is still available. Bloom filters are used by the controller for probobalistic routing to data requests.",
       link: "https://github.com/ryandielhenn/dfs",
       skills: ["Java", "Google Protocol Buffers", "Netty"],
     },
     {
-      name: "Fire-Engine: a multi-threaded search engine",
+      name: "Fire-Engine: multi-threaded search engine",
       description:
         "A multi-threaded search engine that tracks user searches, allows users to crawl web pages, and search an inverted index built from crawled web pages.",
       link: "https://github.com/ryandielhenn/Fire-Engine",
