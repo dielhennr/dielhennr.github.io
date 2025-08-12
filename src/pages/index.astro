@@ -6,6 +6,7 @@ import Projects from "../components/Projects.astro";
 import Experience from "../components/Experience.astro";
 import Education from "../components/Education.astro";
 import Footer from "../components/Footer.astro";
+
 import { siteConfig } from "../config";
 import "../styles/global.css";
 ---
@@ -34,8 +35,14 @@ import "../styles/global.css";
       rel="stylesheet"
     />
     <title>{siteConfig.name} - {siteConfig.title}</title>
+    
+    <!-- Always apply dark mode -->
+    <script is:inline>
+      // Always apply dark mode
+      document.documentElement.classList.add('dark');
+    </script>
   </head>
-  <body>
+  <body class="bg-neutral-950 transition-colors duration-300">
     <Header />
     <section>
       <Hero />

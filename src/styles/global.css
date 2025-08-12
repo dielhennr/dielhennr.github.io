@@ -3,3 +3,13 @@
 body {
   font-family: 'IBM Plex Mono', monospace;
 }
+
+/* Dark mode styles */
+.dark body {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+.dark {
+  color-scheme: dark;
+}
