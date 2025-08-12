@@ -27,7 +27,7 @@ export const siteConfig = {
       skills: ["Java", "Google Protocol Buffers", "Netty"],
     },
     {
-      name: "Fire-Engine",
+      name: "Fire-Engine: a multi-threaded search engine",
       description:
         "A multi-threaded search engine that tracks user searches, allows users to crawl web pages, and search an inverted index built from crawled web pages.",
       link: "https://github.com/ryandielhenn/Fire-Engine",
