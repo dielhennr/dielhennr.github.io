@@ -74,7 +74,7 @@ export const siteConfig = {
     {
       company: "University of San Francisco",
       title: "Assistant Systems Administrator",
-      dateRange: "Aug 2019 - May 2020",
+      dateRange: "May 2019 - Aug 2019",
       bullets: [
           "Assisted the CS support team at USF by updating and maintaining all of the department’s lab machines.",
       ],
