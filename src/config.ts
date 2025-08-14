@@ -16,7 +16,7 @@ export const siteConfig = {
     {
       name: "Zephyrcache: self-healing distributed cache",
       description:
-        "A self-healing distributed cache system with consistent hashing ring, gossip-based membership, and phi accrual failure detection. Features tunable consistency with R/W quorums, replication factor, hinted handoff, read-repair, and anti-entropy with Merkle trees. Includes TTL + LRU eviction, Prometheus metrics, and Docker Compose for local cluster deployment. Currently in MVP stage with multi-node HTTP API using Docker and pluggable ring/membership stubs. (In Progress)",
+        "A self-healing distributed cache system with consistent hashing ring, membership discovery via gossip/etcd (configurable), and phi accrual failure detection. Features tunable consistency with R/W quorums, replication factor, hinted handoff, read-repair, and anti-entropy with Merkle trees. Includes TTL + LRU eviction, Prometheus metrics, and Docker Compose for local cluster deployment. Currently in MVP stage with multi-node HTTP API using Docker and pluggable ring/membership stubs. (In Progress)",
       link: "https://github.com/ryandielhenn/zephyrcache",
       skills: ["Golang", "Consistent Hashing", "Gossip Protocol", "Phi Accrual Failure Detection", "Distributed Systems", "Prometheus", "Docker"],
     },
