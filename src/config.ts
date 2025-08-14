@@ -14,6 +14,13 @@ export const siteConfig = {
   skills: ["Java", "Golang", "C", "Python", "Kafka", "Docker"],
   projects: [
     {
+      name: "Zephyrcache: self-healing distributed cache",
+      description:
+        "A self-healing distributed cache system with consistent hashing ring, gossip-based membership, and phi accrual failure detection. Features tunable consistency with R/W quorums, replication factor, hinted handoff, read-repair, and anti-entropy with Merkle trees. Includes TTL + LRU eviction, Prometheus metrics, and Docker Compose for local cluster deployment. Currently in MVP stage with multi-node HTTP API using Docker and pluggable ring/membership stubs. (In Progress)",
+      link: "https://github.com/ryandielhenn/zephyrcache",
+      skills: ["Golang", "Consistent Hashing", "Gossip Protocol", "Phi Accrual Failure Detection", "Distributed Systems", "Prometheus", "Docker"],
+    },
+    {
       name: "Geopresence: spatiotemporal query system",
       description:
         "The main idea behind this work is to create a geospatial index and query system for edge computing. For a simplistic example, imagine air quality and weather monitoring devices placed on streetlights in a city; instead of querying weather.com query the streetlight across the street from the restaurant you're going to. Used bitmap compression (RoaringBitmap) and cardinality estimation algorithms (HyperLogLog/HyperLogLog++) to optimize the query system for various time and space constraints presented by IoT/low power devices.",
