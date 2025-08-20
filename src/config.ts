@@ -10,7 +10,7 @@ export const siteConfig = {
     github: "https://github.com/ryandielhenn",
   },
   aboutMe:
-    "Software engineer with experience at Confluent, where I contributed to Apache Kafka’s KRaft (ZooKeeper-free) architecture. Currently pursuing an M.S. in Computer Science at Cal State LA with a focus on machine learning and distributed systems.",
+    "Software engineer with experience at Confluent, where I contributed to Apache Kafka’s KRaft (ZooKeeper-free) architecture. Currently pursuing an M.S. in Computer Science at Cal State LA with a focus on artificial intelligence and distributed systems.",
   skills: ["Java", "Golang", "C", "Python", "Kafka", "Docker"],
   projects: [
     {
@@ -102,7 +102,7 @@ export const siteConfig = {
       degree: "Master of Science in Computer Science",
       dateRange: "2025 - 2026",
       achievements: [
-        "Specializing in artificial intelligence and data science",
+        "Specializing in artificial intelligence, distributed systems, and data science",
       ],
     },
     {
