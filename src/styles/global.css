@@ -1,7 +1,21 @@
 @import "tailwindcss";
 
 body {
+  font-family: 'Inter', 'IBM Plex Mono', monospace;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
+/* Improved typography for different text types */
+h1, h2, h3, h4, h5, h6 {
   font-family: 'IBM Plex Mono', monospace;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+p, span, div {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.7;
 }
 
 /* Dark mode styles */

@@ -130,14 +130,12 @@ import { siteConfig } from "../config";
       <h1
         class="text-pretty text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold tracking-tight text-gray-800 dark:text-white animate-fade-in"
       >
-        <span style={{ color: siteConfig.accentColor }}
-          >{siteConfig.name}</span
-        >
+        <span style={{ color: siteConfig.accentColor }} class="typing-animation" id="typing-text"></span>
       </h1>
       <p
         class="mt-4 sm:mt-6 md:mt-8 text-pretty text-base sm:text-lg md:text-xl/8 font-medium text-gray-600 dark:text-gray-400 animate-fade-in animation-delay-400"
       >
-        {siteConfig.title}
+        <span class="typing-animation-headline" id="typing-headline"></span>
       </p>
       {
         siteConfig.resume && (
@@ -320,6 +318,90 @@ import { siteConfig } from "../config";
   .animation-delay-500 {
     animation-delay: 0.5s;
   }
+
+  /* Typing animation */
+  .typing-animation {
+    border-right: 3px solid;
+    border-color: var(--accent-color);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink-caret 0.75s step-end infinite;
+  }
+
+  /* Headline typing animation */
+  .typing-animation-headline {
+    border-right: 2px solid;
+    border-color: #6b7280;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  /* Hide cursor when not typing */
+  .typing-animation.no-cursor {
+    border-right: none;
+  }
+
+  .typing-animation-headline.no-cursor {
+    border-right: none;
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--accent-color); }
+  }
+
+  @keyframes blink-caret-headline {
+    from, to { border-color: transparent; }
+    50% { border-color: #6b7280; }
+  }
+
+  /* Show cursor on headline when typing */
+  .typing-animation-headline:not(.no-cursor) {
+    animation: blink-caret-headline 0.75s step-end infinite;
+  }
 </style>
+
+<script>
+  function typeWriter(element, text, speed = 100, onComplete = null) {
+    let i = 0;
+    element.innerHTML = '';
+    
+    function type() {
+      if (i < text.length) {
+        element.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, speed);
+      } else {
+        // Remove cursor when typing is complete
+        element.classList.add('no-cursor');
+        if (onComplete) onComplete();
+      }
+    }
+    
+    type();
+  }
+
+  // Start typing animation when the page loads
+  document.addEventListener('DOMContentLoaded', function() {
+    const typingElement = document.getElementById('typing-text');
+    const headlineElement = document.getElementById('typing-headline');
+    const name = 'Ryan Dielhenn';
+    const headline = 'Software Engineer | M.S. Computer Science Student';
+    
+    if (typingElement) {
+      // Small delay to let the fade-in animation start first
+      setTimeout(() => {
+        typeWriter(typingElement, name, 150, function() {
+          // When name typing is complete, start typing headline after a pause
+          setTimeout(() => {
+            if (headlineElement) {
+              typeWriter(headlineElement, headline, 80);
+            }
+          }, 500); // 500ms pause between name and headline
+        });
+      }, 300);
+    }
+  });
+</script>
 
 
