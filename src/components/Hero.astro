@@ -8,6 +8,8 @@ import { siteConfig } from "../config";
   style={`--accent-color: ${siteConfig.accentColor}; background-color: ${siteConfig.accentColor}10`}
 >
 
+  <!-- Interactive Particles -->
+  <div class="particles" id="particles"></div>
 
   <svg
     aria-hidden="true"
@@ -125,26 +127,27 @@ import { siteConfig } from "../config";
       height="100%"
       stroke-width={0}></rect>
   </svg>
+  
   <div class="h-full mx-auto p-8 sm:p-12 md:p-24 flex items-center">
     <div>
       <h1
-        class="text-pretty text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold tracking-tight text-gray-800 dark:text-white animate-fade-in"
+        class="text-pretty text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold tracking-tight text-gray-800 dark:text-white animate-bounce-in"
       >
-        <span style={{ color: siteConfig.accentColor }} class="typing-animation" id="typing-text"></span>
+        <span style={{ color: siteConfig.accentColor }} class="typing-animation glow" id="typing-text"></span>
       </h1>
       <p
-        class="mt-4 sm:mt-6 md:mt-8 text-pretty text-base sm:text-lg md:text-xl/8 font-medium text-gray-600 dark:text-gray-400 animate-fade-in animation-delay-400"
+        class="mt-4 sm:mt-6 md:mt-8 text-pretty text-base sm:text-lg md:text-xl/8 font-medium text-gray-600 dark:text-gray-400 animate-fade-in-up animation-delay-400"
       >
         <span class="typing-animation-headline" id="typing-headline"></span>
       </p>
       {
         siteConfig.resume && (
-          <div class="mt-6 sm:mt-8 md:mt-10 animate-fade-in animation-delay-500 flex gap-4">
+          <div class="mt-6 sm:mt-8 md:mt-10 animate-fade-in-up animation-delay-500 flex gap-4">
             <a
               href={siteConfig.resume}
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-gray-300 transition-all duration-300 rounded-lg border-2 border-gray-400 hover:border-gray-300 hover:bg-gray-800 transform hover:-translate-y-0.5"
+              class="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-gray-300 transition-all duration-300 rounded-lg border-2 border-gray-400 hover:border-gray-300 hover:bg-gray-800 transform hover:-translate-y-0.5 btn-animate"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -167,7 +170,7 @@ import { siteConfig } from "../config";
               download="Ryan_Dielhenn_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              class="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 btn-animate"
               style={`background-color: ${siteConfig.accentColor}`}
             >
               <svg
@@ -192,15 +195,16 @@ import { siteConfig } from "../config";
       }
     </div>
   </div>
+  
   <div
-    class="absolute bottom-0 left-0 right-0 p-8 sm:p-12 md:p-24 flex gap-x-4 sm:gap-x-6 md:gap-x-8 text-gray-700 dark:text-gray-300 animate-fade-in animation-delay-600"
+    class="absolute bottom-0 left-0 right-0 p-8 sm:p-12 md:p-24 flex gap-x-4 sm:gap-x-6 md:gap-x-8 text-gray-700 dark:text-gray-300 animate-fade-in-up animation-delay-600"
   >
     {
       siteConfig.social?.email && (
         <a
           href={`mailto:${siteConfig.social.email}`}
+          class="transition-colors duration-300 hover:text-[var(--accent-color)] animate-float"
           aria-label="Email"
-          class="transition-colors duration-300 hover:text-[var(--accent-color)]"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -212,11 +216,9 @@ import { siteConfig } from "../config";
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8"
           >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
-            <path d="M3 7l9 6l9 -6" />
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
           </svg>
         </a>
       )
@@ -227,8 +229,8 @@ import { siteConfig } from "../config";
           href={siteConfig.social.linkedin}
           target="_blank"
           rel="noopener noreferrer"
+          class="transition-colors duration-300 hover:text-[var(--accent-color)] animate-float animation-delay-100"
           aria-label="LinkedIn"
-          class="transition-colors duration-300 hover:text-[var(--accent-color)]"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -240,16 +242,10 @@ import { siteConfig } from "../config";
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8"
           >
-            <>
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M8 11v5" />
-              <path d="M8 8v.01" />
-              <path d="M12 16v-5" />
-              <path d="M16 16v-3a2 2 0 1 0 -4 0" />
-              <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
-            </>
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+            <rect x="2" y="9" width="4" height="12" />
+            <circle cx="4" cy="4" r="2" />
           </svg>
         </a>
       )
@@ -260,8 +256,8 @@ import { siteConfig } from "../config";
           href={siteConfig.social.github}
           target="_blank"
           rel="noopener noreferrer"
+          class="transition-colors duration-300 hover:text-[var(--accent-color)] animate-float animation-delay-200"
           aria-label="GitHub"
-          class="transition-colors duration-300 hover:text-[var(--accent-color)]"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -273,18 +269,33 @@ import { siteConfig } from "../config";
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8"
           >
-            <>
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-            </>
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-1.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
           </svg>
         </a>
       )
     }
   </div>
 </div>
+
+<!-- Floating Action Button -->
+<a href="#hero" class="fab" id="back-to-top" aria-label="Back to top">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <polyline points="18,15 12,9 6,15" />
+  </svg>
+</a>
+
+
 
 <style>
   @keyframes fadeIn {
@@ -373,7 +384,7 @@ import { siteConfig } from "../config";
 </style>
 
 <script>
-  function typeWriter(element, text, speed = 100, onComplete = null) {
+  function typeWriter(element: HTMLElement, text: string, speed: number = 100, onComplete: (() => void) | null = null) {
     let i = 0;
     element.innerHTML = '';
     
@@ -397,27 +408,8 @@ import { siteConfig } from "../config";
     type();
   }
 
-  // Start typing animation when the page loads
-  document.addEventListener('DOMContentLoaded', function() {
-    const typingElement = document.getElementById('typing-text');
-    const headlineElement = document.getElementById('typing-headline');
-    const name = 'Ryan Dielhenn';
-    const headline = 'Software Engineer\nM.S. Computer Science Student';
-    
-    if (typingElement) {
-      // Small delay to let the fade-in animation start first
-      setTimeout(() => {
-        typeWriter(typingElement, name, 150, function() {
-          // When name typing is complete, start typing headline after a pause
-          setTimeout(() => {
-            if (headlineElement) {
-              typeWriter(headlineElement, headline, 80);
-            }
-          }, 500); // 500ms pause between name and headline
-        });
-      }, 300);
-    }
-  });
-</script>
+
+
+
 
 

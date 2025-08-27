@@ -1,71 +1,136 @@
 ---
 import { siteConfig } from "../config";
-const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
 ---
 
-{
-  hasExperience && (
-    <section id="experience" class="pt-20 p-8 sm:p-12 md:p-16 lg:p-24" style={`background-color: ${siteConfig.accentColor}10`}>
-      <div>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-          <div class="lg:col-span-4">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-white">
-              Experience
-            </h2>
-            <div
-              class="w-[75px] h-[5px] mt-2 rounded-full bg-neutral-400"
-            />
-          </div>
-
-          <div class="lg:col-span-8">
-            <div class="relative">
-              {siteConfig.experience.map((exp, index) => (
-                <div class="relative mb-12 last:mb-0">
-                  {/* Timeline dot at top of card */}
-                  <div
-                    class="absolute left-1/2 -top-2 w-4 h-4 bg-neutral-400 border-2 rounded-full -translate-x-1/2 z-20 transition-all duration-300 border-neutral-400"
-                  />
-
-                  {/* Connecting line below card */}
-                  {index < siteConfig.experience.length - 1 && (
-                    <div class="absolute left-1/2 bottom-0 w-0.5 h-12 bg-gray-300 -translate-x-1/2 translate-y-full z-10" />
-                  )}
-
-                  {/* Experience card */}
-                  <div class="bg-neutral-800 rounded-lg shadow-sm border border-neutral-700 p-4 sm:p-5 md:p-6 hover:shadow-md transition-shadow duration-300">
+<section id="experience" class="py-24 bg-neutral-950">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl scroll-animate">
+        Experience
+      </h2>
+      <p class="mt-4 text-lg leading-8 text-gray-300 scroll-animate">
+        My professional journey in software engineering and distributed systems.
+      </p>
+    </div>
+    
+    <div class="mx-auto mt-16 max-w-4xl">
+      <div class="relative">
+        <!-- Timeline line -->
+        <div class="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-neutral-700"></div>
+        
+        <div class="space-y-12">
+          {
+            siteConfig.experience.map((job, index) => (
+              <div class={`timeline-item relative ${index % 2 === 0 ? 'left-timeline' : 'right-timeline'}`}>
+                {/* Timeline dot */}
+                <div class="absolute left-1/2 -top-2 w-4 h-4 bg-neutral-400 border-2 rounded-full -translate-x-1/2 z-20 transition-all duration-300 border-neutral-400 hover:bg-[var(--accent-color)] hover:border-[var(--accent-color)] hover:scale-125"></div>
+                
+                {/* Content card */}
+                <div class={`relative ${index % 2 === 0 ? 'ml-0 mr-auto pr-8' : 'ml-auto mr-0 pl-8'} w-5/12`}>
+                  <div class="bg-neutral-800 rounded-lg shadow-sm border border-neutral-700 p-4 sm:p-5 md:p-6 hover:shadow-md transition-all duration-300 card-3d">
                     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
-                      <div>
-                        <h3 class="text-lg sm:text-xl font-semibold text-white">
-                          {exp.title}
-                        </h3>
-                        <p
-                          class="text-base sm:text-lg text-neutral-400"
-                        >
-                          {exp.company}
-                        </p>
-                      </div>
-                      <span class="text-xs sm:text-sm text-gray-500 mt-2 sm:mt-0">
-                        {exp.dateRange}
+                      <h3 class="text-lg sm:text-xl font-semibold text-white group-hover:text-[var(--accent-color)] transition-colors duration-300">
+                        {job.title}
+                      </h3>
+                      <span class="text-sm text-neutral-400 mt-1 sm:mt-0">
+                        {job.dateRange}
                       </span>
                     </div>
-
+                    <h4 class="text-base sm:text-lg font-medium text-[var(--accent-color)] mb-3">
+                      {job.company}
+                    </h4>
                     <ul class="space-y-2">
-                      {exp.bullets.map((bullet) => (
-                        <li class="flex items-start">
-                          <span class="inline-block w-1.5 h-1.5 rounded-full bg-neutral-400 mt-2 mr-3 flex-shrink-0" />
-                          <span class="text-sm sm:text-base text-gray-300">
-                            {bullet}
-                          </span>
-                        </li>
-                      ))}
+                      {
+                        job.bullets.map((bullet, bulletIndex) => (
+                          <li class="flex items-start space-x-2 text-sm sm:text-base text-gray-300 leading-relaxed">
+                            <span class="flex-shrink-0 w-1.5 h-1.5 bg-[var(--accent-color)] rounded-full mt-2"></span>
+                            <span>{bullet}</span>
+                          </li>
+                        ))
+                      }
                     </ul>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
+              </div>
+            ))
+          }
         </div>
       </div>
-    </section>
-  )
-}
+    </div>
+  </div>
+</section>
+
+<style>
+  .left-timeline {
+    animation: slideInFromLeft 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  
+  .right-timeline {
+    animation: slideInFromRight 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  
+  @keyframes slideInFromLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Responsive timeline */
+  @media (max-width: 768px) {
+    .left-timeline,
+    .right-timeline {
+      width: 100% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-left: 2rem !important;
+      padding-right: 0 !important;
+    }
+    
+    .timeline-item .absolute.left-1/2 {
+      left: 0 !important;
+      transform: none !important;
+    }
+  }
+</style>
+
+<script>
+  // Timeline scroll animations
+  function initTimelineAnimations() {
+    const observerOptions = {
+      threshold: 0.2,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          // Add delay based on index for staggered animation
+          setTimeout(() => {
+            entry.target.classList.add('animate');
+          }, index * 200);
+        }
+      });
+    }, observerOptions);
+
+    // Observe timeline items
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    timelineItems.forEach(el => observer.observe(el));
+  }
+
+  // Initialize animations when DOM is loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    initTimelineAnimations();
+  });
+</script>
