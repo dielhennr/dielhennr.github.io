@@ -18,7 +18,7 @@ import { siteConfig } from "../config";
         {
           siteConfig.education.map((edu, index) => (
             <div class={`scroll-animate ${index % 2 === 0 ? 'animate-fade-in-left' : 'animate-fade-in-right'}`} style={`animation-delay: ${index * 0.2}s`}>
-              <div class="bg-neutral-800 rounded-lg shadow-sm border border-neutral-700 p-4 sm:p-5 md:p-6 hover:shadow-md transition-all duration-300 card-3d">
+              <div class="bg-neutral-800 rounded-lg shadow-sm border border-neutral-700 p-4 sm:p-5 md:p-6 hover:shadow-md transition-all duration-300 card-3d h-full flex flex-col">
                 <div class="flex items-start justify-between mb-4">
                   <div>
                     <h3 class="text-lg sm:text-xl font-semibold text-white group-hover:text-[var(--accent-color)] transition-colors duration-300">
@@ -47,11 +47,11 @@ import { siteConfig } from "../config";
                   </div>
                 </div>
                 
-                <div class="space-y-3">
+                <div class="space-y-3 flex-1 flex flex-col">
                   <p class="text-sm text-neutral-400">
                     {edu.dateRange}
                   </p>
-                  <ul class="space-y-2">
+                  <ul class="space-y-2 flex-1">
                     {edu.achievements.map((achievement: string, achievementIndex: number) => (
                       <li class="flex items-start space-x-2 text-sm text-gray-300 leading-relaxed">
                         <span class="flex-shrink-0 w-1.5 h-1.5 bg-[var(--accent-color)] rounded-full mt-2"></span>
