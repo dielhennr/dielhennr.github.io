@@ -16,28 +16,28 @@ export const siteConfig = {
     {
       name: "Zephyrcache: self-healing distributed cache",
       description:
-        "A self-healing distributed cache system with consistent hashing ring, membership discovery via gossip/etcd (configurable), and phi accrual failure detection. Features tunable consistency with R/W quorums, replication factor, hinted handoff, read-repair, and anti-entropy with Merkle trees. Includes TTL + LRU eviction, Prometheus metrics, and Docker Compose for local cluster deployment (In Progress).",
+        "A self-healing distributed cache with a consistent hashing ring, configurable membership discovery (gossip or etcd), and Phi accrual failure detection. Includes Prometheus metrics, a Grafana dashboard, and Docker Compose for local cluster deployment (in progress).",
       link: "https://github.com/ryandielhenn/zephyrcache",
       skills: ["Golang", "Consistent Hashing", "Gossip Protocol", "Phi Accrual Failure Detection", "Distributed Systems", "Prometheus", "Docker"],
     },
     {
       name: "Geopresence: spatiotemporal query system",
       description:
-        "The main idea behind this work is to create a geospatial index and query system for edge computing. For a simplistic example, imagine air quality and weather monitoring devices placed on streetlights in a city; instead of querying weather.com query the streetlight across the street from the restaurant you're going to. Used bitmap compression (RoaringBitmap) and cardinality estimation algorithms (HyperLogLog/HyperLogLog++) to optimize the query system for various time and space constraints presented by IoT/low power devices.",
+        "The goal of this work is to build a geospatial index and query system for edge computing. For a simple example, imagine air-quality and weather-monitoring devices mounted on streetlights throughout a city. Instead of querying a centralized service like weather.com, you could query the streetlight across the street from the restaurant you’re heading to. The system uses bitmap compression (RoaringBitmap) and cardinality-estimation algorithms (HyperLogLog/HyperLogLog++) to optimize queries for the time and space constraints of IoT and other low-power devices.",
       link: "https://github.com/USF-BigDataLab/geopresence",
       skills: ["C", "RoaringBitmap", "HyperLogLog++", "Geospatial Indexing", "IoT Optimization"],
     },
     {
       name: "DFS: distributed filesystem",
       description:
-        "A distributed filesystem built with Java, Netty, and Google Protocol Buffers. The filesystem supports replication, dynamic addition of storage nodes, and compression. The system is also fault tolerant in that if a node goes down or data is corrupted the original data is still available. Bloom filters are used by the controller for probabilistic routing to data requests.",
+        "A distributed filesystem built with Java, Netty, and Google Protocol Buffers. It supports replication, dynamic addition of storage nodes, and compression. The system is fault tolerant: if a node goes down or data is corrupted, the original data remains available. Bloom filters are used by the controller to provide probabilistic routing for data requests.",
       link: "https://github.com/ryandielhenn/dfs",
       skills: ["Java", "Netty", "Protocol Buffers", "Bloom Filters", "Distributed Systems"],
     },
     {
       name: "Fire-Engine: multi-threaded search engine",
       description:
-        "A multi-threaded search engine that tracks user searches, allows users to crawl web pages, and search an inverted index built from crawled web pages.",
+        "A multi-threaded search engine that tracks user queries, enables web crawling, and supports search over an inverted index built from the crawled pages.",
       link: "https://github.com/ryandielhenn/Fire-Engine",
       skills: ["Java", "Multi-threading", "Inverted Index", "Web Crawling", "Jetty"],
     },
@@ -46,10 +46,11 @@ export const siteConfig = {
     {
       company: "Confluent",
       title: "Software Engineer",
-      dateRange: "Jan 2021 - July 2022",
+      dateRange: "Jan 2021 - Jul 2022",
       bullets: [
-        "Collaborated across engineering teams to improve system reliability, observability, and security during Kafka’s transition to a ZooKeeper-free architecture.",
-        "Developed tooling and integrated metrics pipelines to monitor Kafka’s internal state during KRaft migration, enabling teams to track cluster health, debug failures, and validate quorum behavior in production.",
+        "Collaborated with engineering teams to improve reliability, observability, and security during Kafka’s transition to a ZooKeeper-free architecture (KRaft).",
+        "Adapted Cluster Linking to support KRaft, enabling cross-cluster replication without ZooKeeper.",
+        "Integrated metrics to monitor Kafka cluster health in KRaft mode.",
       ],
     },
     {
@@ -57,7 +58,7 @@ export const siteConfig = {
       title: "Open Source Contributor",
       dateRange: "Aug 2020 - Dec 2020",
       bullets: [
-        "Continued contributing to Apache Kafka after my internship at Confluent.",
+        "Contributed to Apache Kafka following my internship at Confluent, with a focus on dynamic client reconfiguration.",
       ],
     },
     {
@@ -65,26 +66,26 @@ export const siteConfig = {
       title: "Software Engineering Intern",
       dateRange: "May 2020 - Aug 2020",
       bullets: [
-          "Designed and implemented a Kafka feature for dynamic client reconfiguration, allowing users to update producer and consumer settings with a single command—eliminating restarts and reducing operational overhead.",
-          "Extended cluster rebalance tooling to support asynchronous log replicas in Confluent Cloud, enabling successful rebalancing for affected customers—shipped within the first month of the internship.",
+        "Designed and implemented a Kafka feature for dynamic client reconfiguration, allowing users to update producer and consumer settings with a single command—eliminating restarts and reducing operational overhead.",
+        "Extended cluster rebalance tooling to support asynchronous log replicas in Confluent Cloud, enabling successful rebalancing for affected customers—shipped within the first month of the internship.",
       ],
     },
     {
       company: "University of San Francisco",
-      title: "Research Assistant",
+      title: "Research Assistant (Distributed Systems & Edge Computing)",
       dateRange: "Jan 2020 - Dec 2020",
       bullets: [
-          "Contributed to research in distributed systems and edge computing.",
-          "Prototyped and benchmarked system performance across varied workloads and programming languages.",
+        "Contributed to research in distributed systems and edge computing.",
+        "Prototyped and benchmarked performance across varied workloads and programming languages.",
       ],
     },
     {
       company: "University of San Francisco",
-      title: "Teaching Assistant for CS326 (Operating Systems) and CS677 (Big Data)",
+      title: "Teaching Assistant — Operating Systems & Big Data",
       dateRange: "Aug 2019 - May 2020",
       bullets: [
-          "Designed projects/coursework, reviewed student code weekly, and gave grades with feedback.",
-          "Held weekly office hours to help students design/debug projects.",
+        "Designed projects and coursework, reviewed student code weekly, and provided feedback with grades.",
+        "Held weekly office hours to guide students through design and debugging of projects.",
       ],
     },
     {
@@ -92,9 +93,9 @@ export const siteConfig = {
       title: "Assistant Systems Administrator",
       dateRange: "May 2019 - Aug 2019",
       bullets: [
-          "Assisted the CS support team at USF by updating and maintaining all of the department’s lab machines.",
+        "Supported the CS department by updating, patching, and maintaining all lab machines, improving system stability for students and faculty.",
       ],
-    },
+    },    
   ],
   education: [
     {
