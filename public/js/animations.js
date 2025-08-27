@@ -15,6 +15,8 @@ class AnimationController {
     this.initBackToTop();
     this.initSmoothScrolling();
     this.initHoverEffects();
+    this.initParallaxScrolling();
+    this.initGestureSupport();
     
     this.isInitialized = true;
   }
@@ -241,6 +243,64 @@ class AnimationController {
         });
       }, 300);
     }
+  }
+
+  // Parallax scrolling
+  initParallaxScrolling() {
+    const parallaxElements = document.querySelectorAll('.parallax-slow, .parallax-medium, .parallax-fast');
+    
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      
+      parallaxElements.forEach(element => {
+        const speed = element.classList.contains('parallax-slow') ? 0.5 : 
+                     element.classList.contains('parallax-medium') ? 0.3 : 0.1;
+        
+        const yPos = -(scrolled * speed);
+        element.style.transform = `translateY(${yPos}px)`;
+      });
+    });
+  }
+
+  // Gesture support for mobile
+  initGestureSupport() {
+    const gestureContainer = document.querySelector('.gesture-container');
+    if (!gestureContainer) return;
+
+    let startX = 0;
+    let currentX = 0;
+    let isDragging = false;
+
+    gestureContainer.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+      isDragging = true;
+    });
+
+    gestureContainer.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      e.preventDefault();
+      currentX = e.touches[0].clientX;
+    });
+
+    gestureContainer.addEventListener('touchend', () => {
+      if (!isDragging) return;
+      
+      const diff = startX - currentX;
+      const threshold = 50;
+      
+      if (Math.abs(diff) > threshold) {
+        // Handle swipe gesture
+        if (diff > 0) {
+          // Swipe left - could navigate to next section
+          console.log('Swipe left detected');
+        } else {
+          // Swipe right - could navigate to previous section
+          console.log('Swipe right detected');
+        }
+      }
+      
+      isDragging = false;
+    });
   }
 
   // Cleanup

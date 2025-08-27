@@ -2,7 +2,7 @@
 import { siteConfig } from "../config";
 ---
 
-<section id="experience" class="py-24 bg-neutral-950">
+<section id="experience" class="py-16 bg-neutral-950">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-2xl text-center">
       <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl scroll-animate">
@@ -16,7 +16,7 @@ import { siteConfig } from "../config";
     <div class="mx-auto mt-16 max-w-4xl">
       <div class="relative">
         <!-- Timeline line -->
-        <div class="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-neutral-700 md:block hidden"></div>
+        <div class="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-neutral-700 md:block hidden" style="height: calc(100% + 2rem);"></div>
         
         <div class="space-y-12">
           {
@@ -54,6 +54,11 @@ import { siteConfig } from "../config";
               </div>
             ))
           }
+          
+          {/* Final timeline dot */}
+          <div class="relative h-0">
+            <div class="absolute left-1/2 -top-4 w-4 h-4 bg-neutral-400 border-2 rounded-full -translate-x-1/2 z-20 transition-all duration-300 border-neutral-400 hover:bg-[var(--accent-color)] hover:border-[var(--accent-color)] hover:scale-125 md:block hidden"></div>
+          </div>
         </div>
       </div>
     </div>
