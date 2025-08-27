@@ -23,7 +23,7 @@ import { siteConfig } from "../config";
             siteConfig.experience.map((job, index) => (
               <div class={`timeline-item relative ${index % 2 === 0 ? 'left-timeline' : 'right-timeline'}`}>
                 {/* Timeline dot */}
-                <div class="absolute left-1/2 -top-2 w-4 h-4 bg-neutral-400 border-2 rounded-full -translate-x-1/2 z-20 transition-all duration-300 border-neutral-400 hover:bg-[var(--accent-color)] hover:border-[var(--accent-color)] hover:scale-125"></div>
+                <div class="absolute left-1/2 -top-2 w-4 h-4 bg-neutral-400 border-2 rounded-full -translate-x-1/2 z-20 transition-all duration-300 border-neutral-400 hover:bg-[var(--accent-color)] hover:border-[var(--accent-color)] hover:scale-125 md:block hidden"></div>
                 
                 {/* Content card */}
                 <div class={`relative ${index % 2 === 0 ? 'ml-0 mr-auto pr-8' : 'ml-auto mr-0 pl-8'} w-5/12 md:w-5/12 w-full`}>
