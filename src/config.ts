@@ -11,7 +11,7 @@ export const siteConfig = {
   },
   aboutMe:
     "Software engineer with experience at Confluent, contributing to Apache Kafka’s KRaft (ZooKeeper-free) architecture. Currently pursuing an M.S. in Computer Science at Cal State LA, specializing in distributed systems, artificial intelligence, and data science.",
-  skills: ["Java", "Go", "C", "Python", "Apache Kafka", "Docker", "Linux", "Prometheus"],
+  skills: ["Java", "Go", "C", "Python", "Apache Kafka", "Docker", "Linux"],
   projects: [
     {
       name: "ZephyrCache: Self-Healing Distributed Cache",
