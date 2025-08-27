@@ -323,8 +323,10 @@ import { siteConfig } from "../config";
   .typing-animation {
     border-right: 3px solid;
     border-color: var(--accent-color);
-    white-space: nowrap;
+    white-space: normal;
     overflow: hidden;
+    word-wrap: break-word;
+    word-break: break-word;
     animation: blink-caret 0.75s step-end infinite;
   }
 
@@ -332,8 +334,10 @@ import { siteConfig } from "../config";
   .typing-animation-headline {
     border-right: 2px solid;
     border-color: #6b7280;
-    white-space: nowrap;
+    white-space: normal;
     overflow: hidden;
+    word-wrap: break-word;
+    word-break: break-word;
   }
 
   /* Hide cursor when not typing */
