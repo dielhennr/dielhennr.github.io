@@ -287,6 +287,59 @@ p, span, div {
   background-color: rgba(31, 41, 55, 0.98);
 }
 
+/* Mobile optimizations for project cards */
+@media (max-width: 768px) {
+  .card-3d {
+    /* Reduce 3D effects on mobile for better performance */
+    transform-style: flat;
+  }
+  
+  .card-3d:hover,
+  .card-3d.group:hover {
+    /* Simplified hover effects for mobile */
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 0 20px rgba(29, 78, 216, 0.2);
+    border-color: rgba(29, 78, 216, 0.5);
+    background-color: rgba(31, 41, 55, 0.95);
+  }
+  
+  /* Ensure skill tags are readable on mobile */
+  .skill-tag {
+    font-size: 0.75rem;
+    padding: 0.375rem 0.75rem;
+    margin: 0.125rem;
+  }
+  
+  /* Optimize text sizes for mobile */
+  .card-3d h3 {
+    font-size: 1.125rem;
+    line-height: 1.4;
+  }
+  
+  .card-3d p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+  
+  /* Timeline mobile optimizations */
+  .timeline-item {
+    /* Ensure proper spacing on mobile */
+    margin-bottom: 2rem !important;
+  }
+  
+  /* Simplify timeline animations on mobile */
+  .left-timeline,
+  .right-timeline {
+    animation: slideInFromBottom 0.8s ease-out forwards !important;
+    transform: translateY(30px) !important;
+  }
+  
+  .left-timeline.animate,
+  .right-timeline.animate {
+    transform: translateY(0) !important;
+  }
+}
+
 /* Glowing Effects */
 .glow {
   position: relative;
