@@ -1,11 +1,16 @@
 @import "tailwindcss";
 
+html, body {
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: none;
+  overscroll-behavior-x: none;
+}
+
 body {
   font-family: 'Inter', 'IBM Plex Mono', monospace;
   line-height: 1.7;
   letter-spacing: 0.01em;
-  overscroll-behavior: none;
-  -webkit-overflow-scrolling: touch;
 }
 
 /* Improved typography for different text types */
