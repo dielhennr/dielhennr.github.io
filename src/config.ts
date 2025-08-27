@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Ryan Dielhenn",
-  title: "Software Engineer\nM.S. Computer Science Student",
+  title: "Software Engineer\nM.S. Computer\nScience Student",
   description: "Portfolio website of Ryan Dielhenn",
   accentColor: "#1d4ed8",
   resume: "/ryan_dielhenn_resume.pdf",

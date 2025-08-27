@@ -340,6 +340,13 @@ import { siteConfig } from "../config";
     word-break: break-word;
   }
 
+  /* Mobile-specific word breaking for the headline */
+  @media (max-width: 768px) {
+    .typing-animation-headline {
+      word-break: break-all;
+    }
+  }
+
   /* Hide cursor when not typing */
   .typing-animation.no-cursor {
     border-right: none;
