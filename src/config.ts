@@ -44,16 +44,17 @@ export const siteConfig = {
         "Containerizing with Docker Compose for easy local cluster deployment and testing.",
       ],
     },
+
   {
     company: "Confluent",
-    title: "Software Engineer & Software Engineering Intern",
+    title: "Software Engineer (Intern → Contributor → Full-time)",
     dateRange: "May 2020 – Jul 2022",
     bullets: [
-      "As an intern (Summer 2020), implemented dynamic client reconfiguration in Kafka, allowing producers/consumers to update settings without restarts, and extended cluster rebalance tooling in Confluent Cloud to support asynchronous replicas.",
-      "While completing my undergraduate degree (Fall 2020), continued contributing off-hours to Apache Kafka, supporting improvements in reliability and configuration flexibility.",
-      "Brought back in Jan 2021 as a Software Engineer, collaborating across engineering teams to improve reliability, observability, and security during Kafka's transition to a ZooKeeper-free architecture (KRaft).",
+      "Collaborated across engineering teams to improve reliability, observability, and security during Kafka’s transition to a ZooKeeper-free architecture (KRaft).",
       "Adapted Cluster Linking to support KRaft, enabling cross-cluster replication without ZooKeeper.",
-      "Integrated metrics pipelines to monitor cluster health and quorum state in KRaft mode."
+      "Integrated metrics to ensure visibility into quorum state and cluster health in Kafka’s KRaft mode.",
+      "Developed dynamic client reconfiguration in Kafka (as a Summer 2020 intern), allowing producers/consumers to update settings without downtime, and extended Confluent Cloud’s rebalance tooling to support asynchronous replicas.",
+      "Continued contributing to Apache Kafka while completing my undergraduate degree (Fall 2020) before returning full time in Jan 2021."
     ]
   },
   {
