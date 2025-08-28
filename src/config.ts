@@ -13,20 +13,8 @@ export const siteConfig = {
     "Software engineer with experience at Confluent, contributing to Apache Kafka’s KRaft (ZooKeeper-free) architecture. Currently pursuing an M.S. in Computer Science at Cal State LA, specializing in distributed systems, artificial intelligence, and data science.",
   skills: ["Java", "Go", "C", "Python", "Apache Kafka", "Docker", "Linux"],
   projects: [
-    {
-      name: "ZephyrCache: Self-Healing Distributed Cache",
-      description:
-        "A self-healing distributed cache featuring a consistent hashing ring, configurable membership discovery (gossip or etcd), and Phi accrual failure detection. Includes Prometheus metrics, a Grafana dashboard, and Docker Compose for local cluster deployment (in progress).",
-      link: "https://github.com/ryandielhenn/zephyrcache",
-      skills: ["Go", "Consistent Hashing", "Gossip Protocol", "Phi Accrual Failure Detection", "Prometheus", "Docker", "Distributed Systems"],
-    },
-    {
-      name: "GeoPresence: Spatiotemporal Query System",
-      description:
-        "A geospatial index and query system for edge computing. For example, imagine air-quality and weather-monitoring devices mounted on city streetlights. Instead of querying a centralized service like weather.com, you could query the streetlight nearest to your location. Uses bitmap compression (RoaringBitmap) and cardinality-estimation algorithms (HyperLogLog/HyperLogLog++) to optimize queries for the time and space constraints of IoT and other low-power devices.",
-      link: "https://github.com/USF-BigDataLab/geopresence",
-      skills: ["C", "RoaringBitmap", "HyperLogLog++", "Geospatial Indexing", "IoT Optimization"],
-    },
+
+
     {
       name: "DFS: Distributed Filesystem",
       description:
@@ -43,6 +31,19 @@ export const siteConfig = {
     },
   ],
   experience: [
+    {
+      company: "Personal Project",
+      title: "ZephyrCache - Self-Healing Distributed Cache",
+      dateRange: "2024 – Present",
+      link: "https://github.com/ryandielhenn/zephyrcache",
+      bullets: [
+        "Designing and implementing a self-healing distributed cache featuring consistent hashing ring for data distribution and load balancing.",
+        "Implementing configurable membership discovery supporting both gossip protocol and etcd-based coordination.",
+        "Integrating Phi accrual failure detection for adaptive failure detection and automatic node recovery.",
+        "Adding comprehensive monitoring with Prometheus metrics and Grafana dashboard for observability.",
+        "Containerizing with Docker Compose for easy local cluster deployment and testing.",
+      ],
+    },
     {
       company: "Confluent",
       title: "Software Engineer",
@@ -74,9 +75,12 @@ export const siteConfig = {
       company: "University of San Francisco",
       title: "Research Assistant (Distributed Systems & Edge Computing)",
       dateRange: "Jan 2020 – Dec 2020",
+      link: "https://github.com/USF-BigDataLab/geopresence",
       bullets: [
-        "Contributed to research in distributed systems and edge computing.",
+        "Developed GeoPresence, a geospatial index and query system for edge computing using bitmap compression (RoaringBitmap) and cardinality-estimation algorithms (HyperLogLog++).",
+        "Designed for IoT optimization, enabling local queries to nearby devices instead of centralized services.",
         "Prototyped and benchmarked performance across varied workloads and programming languages.",
+        "Contributed to research in distributed systems and edge computing.",
       ],
     },
     {

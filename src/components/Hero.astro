@@ -34,7 +34,8 @@ import { siteConfig } from "../config";
               href={siteConfig.resume}
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-gray-300 transition-all duration-300 rounded-lg border-2 border-gray-400 hover:border-gray-300 hover:bg-gray-800 transform hover:-translate-y-0.5 btn-animate resume-btn"
+              class="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-gray-300 transition-all duration-300 rounded-lg border-2 border-gray-400 hover:border-gray-300 hover:bg-gray-800 transform hover:-translate-y-0.5 btn-animate resume-btn"
+              style="min-height: 44px; min-width: 120px;"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -46,19 +47,20 @@ import { siteConfig } from "../config";
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
+                class="flex-shrink-0"
               >
                 <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
                 <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
               </svg>
-              View Resume
+              <span>View Resume</span>
             </a>
             <a
               href={siteConfig.resume}
               download="Ryan_Dielhenn_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 btn-animate resume-btn"
-              style={`background-color: ${siteConfig.accentColor}`}
+              class="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 btn-animate resume-btn"
+              style={`background-color: ${siteConfig.accentColor}; min-height: 44px; min-width: 120px;`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -70,12 +72,13 @@ import { siteConfig } from "../config";
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
+                class="flex-shrink-0"
               >
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                 <polyline points="7,10 12,15 17,10" />
                 <line x1="12" y1="15" x2="12" y2="3" />
               </svg>
-              Download Resume
+              <span>Download Resume</span>
             </a>
           </div>
         )
@@ -274,22 +277,27 @@ import { siteConfig } from "../config";
     position: relative;
     z-index: 10;
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
     /* Ensure the entire button area is clickable */
     min-height: 44px;
     min-width: 120px;
+    /* Prevent text selection */
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
   }
 
-  .resume-btn::before {
-    pointer-events: none !important;
-  }
-
-  /* Force clickable area to cover the entire button */
-  .resume-btn * {
-    pointer-events: none;
-  }
-
-  .resume-btn:hover * {
-    pointer-events: none;
+  /* Ensure proper touch targets on mobile */
+  @media (max-width: 768px) {
+    .resume-btn {
+      min-height: 48px;
+      min-width: 140px;
+      padding: 12px 16px;
+    }
   }
 </style>
 

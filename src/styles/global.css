@@ -292,19 +292,15 @@ p, span, div {
 }
 
 .card-3d:hover {
-  transform: translateY(-8px) rotateX(8deg) rotateY(8deg) scale(1.02);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 0 30px rgba(29, 78, 216, 0.2);
-  border-color: rgba(29, 78, 216, 0.5);
-  background-color: rgba(31, 41, 55, 0.95);
-}
-
-/* Enhanced project card effects */
-.card-3d.group:hover {
   transform: translateY(-12px) rotateX(10deg) rotateY(10deg) scale(1.03);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(29, 78, 216, 0.3);
   border-color: rgba(29, 78, 216, 0.7);
   background-color: rgba(31, 41, 55, 0.98);
 }
+
+
+
+
 
 /* Mobile optimizations for project cards */
 @media (max-width: 768px) {
