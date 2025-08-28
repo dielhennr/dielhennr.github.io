@@ -225,13 +225,25 @@ p, span, div {
 /* Scroll-triggered animations */
 .scroll-animate {
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease-out;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .scroll-animate.animate {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Mobile optimizations for scroll animations */
+@media (max-width: 768px) {
+  .scroll-animate {
+    transform: translateY(15px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  }
+  
+  .scroll-animate.animate {
+    transform: translateY(0);
+  }
 }
 
 /* Particle System */
@@ -334,16 +346,22 @@ p, span, div {
     margin-bottom: 2rem !important;
   }
   
-  /* Simplify timeline animations on mobile */
-  .left-timeline,
-  .right-timeline {
-    animation: slideInFromBottom 0.8s ease-out forwards !important;
-    transform: translateY(30px) !important;
+  /* Ensure consistent section spacing on mobile */
+  section {
+    /* Prevent layout shifts during animations */
+    min-height: 0;
+    contain: layout style paint;
   }
   
-  .left-timeline.animate,
-  .right-timeline.animate {
-    transform: translateY(0) !important;
+  /* Improve animation performance on mobile */
+  * {
+    will-change: auto;
+  }
+  
+  .scroll-animate,
+  .timeline-item,
+  .education-item {
+    will-change: transform, opacity;
   }
 }
 
@@ -395,21 +413,25 @@ p, span, div {
 /* Timeline Animations */
 .timeline-item {
   opacity: 0;
-  transform: translateX(-30px);
-  transition: all 0.8s ease-out;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .timeline-item.animate {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
-.timeline-item:nth-child(even) {
-  transform: translateX(30px);
-}
-
-.timeline-item:nth-child(even).animate {
-  transform: translateX(0);
+/* Mobile timeline optimizations */
+@media (max-width: 768px) {
+  .timeline-item {
+    transform: translateY(15px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  }
+  
+  .timeline-item.animate {
+    transform: translateY(0);
+  }
 }
 
 /* Floating Action Button */

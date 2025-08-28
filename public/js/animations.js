@@ -30,14 +30,19 @@ class AnimationController {
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate');
+        if (entry.isIntersecting && !entry.target.classList.contains('animate')) {
+          // Add a small delay to prevent layout shifts
+          requestAnimationFrame(() => {
+            entry.target.classList.add('animate');
+          });
           
           // Trigger staggered animations for child elements
           const children = entry.target.querySelectorAll('.animate-stagger');
           children.forEach((child, index) => {
             setTimeout(() => {
-              child.classList.add('animate');
+              if (!child.classList.contains('animate')) {
+                child.classList.add('animate');
+              }
             }, index * 100);
           });
         }
