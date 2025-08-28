@@ -34,7 +34,7 @@ import { siteConfig } from "../config";
               href={siteConfig.resume}
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-gray-300 transition-all duration-300 rounded-lg border-2 border-gray-400 hover:border-gray-300 hover:bg-gray-800 transform hover:-translate-y-0.5 btn-animate"
+              class="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-gray-300 transition-all duration-300 rounded-lg border-2 border-gray-400 hover:border-gray-300 hover:bg-gray-800 transform hover:-translate-y-0.5 btn-animate resume-btn"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +57,7 @@ import { siteConfig } from "../config";
               download="Ryan_Dielhenn_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 btn-animate"
+              class="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 btn-animate resume-btn"
               style={`background-color: ${siteConfig.accentColor}`}
             >
               <svg
@@ -267,6 +267,29 @@ import { siteConfig } from "../config";
   /* Show cursor on headline when typing */
   .typing-animation-headline:not(.no-cursor) {
     animation: blink-caret-headline 0.75s step-end infinite;
+  }
+
+  /* Ensure resume buttons are fully clickable */
+  .resume-btn {
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    /* Ensure the entire button area is clickable */
+    min-height: 44px;
+    min-width: 120px;
+  }
+
+  .resume-btn::before {
+    pointer-events: none !important;
+  }
+
+  /* Force clickable area to cover the entire button */
+  .resume-btn * {
+    pointer-events: none;
+  }
+
+  .resume-btn:hover * {
+    pointer-events: none;
   }
 </style>
 
