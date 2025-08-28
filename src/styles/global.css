@@ -503,6 +503,10 @@ html {
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
+  /* Ensure the entire button area is clickable */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-animate::before {
@@ -514,6 +518,9 @@ html {
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
   transition: left 0.5s ease;
+  /* Ensure the pseudo-element doesn't interfere with clicks */
+  pointer-events: none;
+  z-index: 1;
 }
 
 .btn-animate:hover::before {
