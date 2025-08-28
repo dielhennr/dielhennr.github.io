@@ -34,7 +34,7 @@ export const siteConfig = {
     {
       company: "Personal Project",
       title: "ZephyrCache - Self-Healing Distributed Cache",
-      dateRange: "2024 – Present",
+      dateRange: "Aug 2025 – Present",
       link: "https://github.com/ryandielhenn/zephyrcache",
       bullets: [
         "Designing and implementing a self-healing distributed cache featuring consistent hashing ring for data distribution and load balancing.",
@@ -46,29 +46,13 @@ export const siteConfig = {
     },
     {
       company: "Confluent",
-      title: "Software Engineer",
-      dateRange: "Jan 2021 – Jul 2022",
+      title: "Software Engineer & Software Engineering Intern",
+      dateRange: "May 2020 – Jul 2022",
       bullets: [
-        "Collaborated across engineering teams to improve reliability, observability, and security during Kafka’s transition to a ZooKeeper-free architecture (KRaft).",
+        "Collaborated across engineering teams to improve reliability, observability, and security during Kafka's transition to a ZooKeeper-free architecture (KRaft).",
         "Adapted Cluster Linking to support KRaft, enabling cross-cluster replication without ZooKeeper.",
-        "Integrated metrics to monitor Kafka cluster health in KRaft mode.",
-      ],
-    },
-    {
-      company: "Apache Software Foundation",
-      title: "Open Source Contributor",
-      dateRange: "Aug 2020 – Dec 2020",
-      bullets: [
-        "Contributed to Apache Kafka following my internship at Confluent, focusing on dynamic client reconfiguration.",
-      ],
-    },
-    {
-      company: "Confluent",
-      title: "Software Engineering Intern",
-      dateRange: "May 2020 – Aug 2020",
-      bullets: [
-        "Designed and implemented a Kafka feature for dynamic client reconfiguration, allowing users to update producer and consumer settings with a single command—eliminating restarts and reducing operational overhead.",
-        "Extended cluster rebalance tooling to support asynchronous log replicas in Confluent Cloud, enabling successful rebalancing for affected customers—shipped within the first month of the internship.",
+        "Integrated metrics pipelines to monitor cluster health and quorum state in KRaft mode.",
+        "As an intern (Summer 2020), implemented dynamic client reconfiguration in Kafka, allowing producers/consumers to update settings without restarts, and extended cluster rebalance tooling in Confluent Cloud to support asynchronous replicas.",
       ],
     },
     {
