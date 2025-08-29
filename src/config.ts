@@ -33,7 +33,7 @@ export const siteConfig = {
   experience: [
     {
       company: "Personal Project",
-      title: "ZephyrCache - Self-Healing Distributed Cache",
+      title: "Zephyr - Self-Healing Distributed Cache",
       dateRange: "Aug 2025 – Present",
       link: "https://github.com/ryandielhenn/zephyrcache",
       bullets: [
